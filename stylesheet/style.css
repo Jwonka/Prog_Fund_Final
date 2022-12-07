@@ -1,0 +1,54 @@
+  body {
+    
+    background-color: #F00000;
+    color: 333;
+  }
+  
+  header, footer, nav {
+    text-align: center;
+  }
+  
+  h1, h2, h3, h4, p {
+    margin: 20px 0 20px 0;
+  }
+h1  a:visited { color: #A58366; }
+
+h1  a:hover { color: #FF0000; }
+
+h2  a:visited { color: #A58366; }
+
+h2  a:hover { color: #FF0000; }
+
+  h1, h2 {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+h3 { 
+  text-align: center;
+  background-color: #A58366;
+  text-transform: uppercase;
+}
+
+.final { margin-left: 440px;}
+
+.output { text-align: center;}
+
+h3, p { text-align: center;}
+
+h3, p { text-align: center;}
+
+header { background-color: #00FFFF; }
+
+footer  a:visited { color: #A58366; }
+
+footer  a:hover { color: #FF0000; }
+
+footer {
+  color: #000000;
+  background-color: #00FFFF;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.5em;
+  padding: 0px;
+}

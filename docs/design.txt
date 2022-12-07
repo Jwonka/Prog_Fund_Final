@@ -1,0 +1,154 @@
+PROBLEM STATEMENT: Write a program that uses a loop. Inside the loop, the program asks a 
+                   user what their GPA is.  If their GPA is over 3.0 it then asks how 
+                   much money they have available. When the loop has completed, 
+                   ask the user if they want to play again.  If the user does not 
+                   want to play again display input and decision to the user.
+
+
+Nouns: input, loop completed, money available, decision  
+
+Verbs: asks, loop, display
+
+
+Defining Diagram:
+ 
+INPUTS: conditionalMessage
+        moneyMessage
+        playMessage
+        userInput
+        
+
+PROCESSING: Initialize conditionalMessage to ""
+            Initialize moneyMessage to ""
+            Initialize playMessage to "y"
+            Initialize userInput to ""
+            
+            Prompt for userInput with "What is your current GPA?" 
+            Convert userInput to a number
+            If UserInput less than or equal to "3"
+            Create conditionalMessage
+            Display conditionalMessage with "Your GPA is: " + userInput + "You should study!"
+            Prompt for moneyMessage with "How much money do you have available?" 
+            Convert moneyMessage to a number
+            If moneyMessage is greater than 500
+            Create conditionalMessage
+            Display conditionalMessage with "Do you want to watch Netflix?"
+            Else create conditionalMessage
+            Display conditionalMessage with "Do you want to watch Netflix?"
+           
+            Display userInput 
+            Display conditional message
+            Display playMessage
+            
+
+OUTPUTS: conditionalMessage
+         moneyMessage
+         playMessage
+         userInput
+
+
+SOLUTION ALGORITHM:
+function main()
+function decisionMaker() 
+  Set userInput to ""
+  Set playMessage to "y"
+  
+  while(playMessage == "y") 
+    set conditionalMessage to ""
+    set moneyMessage to "" 
+    
+    userInput = prompt("What is your current GPA?")
+    userInput = Number(userInput) 
+
+  
+    decision(userInput)
+  
+    playMessage = prompt("Do you want to play again?")
+
+decisionMaker()
+function decision(userInput) 
+  IF(userInput <= 3) 
+    conditionalMessage = "You should study!"
+    Display ("Your GPA is: " + userInput + " " + conditionalMessage)
+    ELSE 
+      moneyMessage = prompt("How much money do you have available?")
+      moneyMessage = Number(moneyMessage)
+      IF(moneyMessage > 500) 
+        conditionalMessage = "Do you want to watch Netflix?"
+      ELSE 
+        conditionalMessage = "You should go to work!"
+      END ELSE
+    END ELSE
+  END If
+END
+
+      
+      output = "Your GPA is: " + userInput + "You have " + "$" + moneyMessage + " available." + conditionalMessage 
+      document.write(output);
+main()
+ 
+        
+VARIABLES: conditionalMessage, playMessage, userInput
+
+TEST CASE 1:
+
+  INPUT VALUES: GPA 2.0, 
+
+  EXPECTED RESULT: Your GPA is: 2.0 
+  
+                   You should study!
+
+  ACTUAL RESULT: Your GPA is: 2
+
+                 You should study!
+
+TEST CASE 2:
+
+  INPUT VALUES: GPA 3.1, money available 200
+
+  EXPECTED RESULT: Your GPA is: 3.1 
+                
+                   You have $200 available. 
+                   
+                   You should go to work! 
+
+  ACTUAL RESULT: Your GPA is: 3.1
+  
+                 You have $200 available. 
+                   
+                 You should go to work!
+
+TEST CASE 3:
+
+  INPUT VALUES: GPA 3.8, money available 800
+
+  EXPECTED RESULT:  Your GPA is: 3.8 
+  
+                    You have $800 available.
+                    
+                    Do you want to watch Netlix?
+
+  ACTUAL RESULT:  Your GPA is: 3.8
+
+                  You have $800 available.
+
+                  Do you want to watch Netflix?
+
+TEST CASE 4:
+
+  INPUT VALUES:  GPA fv, money available 0
+
+  EXPECTED RESULT:  Your GPA is: NaN
+
+                    You have $0 available.
+
+                    You should go to work!
+
+  ACTUAL RESULT:  Your GPA is: NaN
+
+                  You have $0 available.
+
+                  You should go to work!
+
+
+
